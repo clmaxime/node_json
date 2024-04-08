@@ -1,0 +1,37 @@
+GET http://localhost:3003
+
+###
+
+GET http://localhost:3003/shop
+
+
+###
+
+GET http://localhost:3003/shop/1
+
+### 
+
+POST http://localhost:3003/shop
+Content-Type: application/json
+
+{
+    "title": "test",
+    "price": 30,
+    "importUri": "test"
+}
+
+### 
+
+
+PUT http://localhost:3003/shop/4
+Content-Type: application/json
+
+{
+    "title": "nouvelle entrée",
+    "price": 50,
+    "importUri": "test"
+}
+
+###
+
+DELETE http://localhost:3003/shop/2

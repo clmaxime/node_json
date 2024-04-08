@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>My E-commerce Application</title>
+  </head>
+  <body>
+    <h1>ajouter un produit</h1>
+    <form action="/add" method="POST" enctype="multipart/form-data">
+      <input type="text" name="title" id="title" placeholder="titre" required />
+      <input type="number" name="price" id="price" placeholder="prix" required />
+      <input type="text" name="description" id="description" placeholder="description" required />
+      <button type="submit">Ajouter</button>
+  </body>
+</html>

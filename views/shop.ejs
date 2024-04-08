@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('includes/head') %>
+    <h1>Articles</h1>
+    <section>
+      <% if(products && products.length > 0) { %>
+        <% for(let i = 0; i < products.length; i++) { %>
+
+        <article>
+          <div>
+            <img src="/img/<%= products[i].importUri %>"alt="img">
+          </div>
+          <h3><%= products[i].title %></h3>
+          <h4><%= products[i].price %></h4>
+          <a href="#">Acheter</a>
+          <a href="#">Supprimer</a>
+        </article>
+        <% } %>
+      <% } %>
+    </section>
+  </body>
+</html>

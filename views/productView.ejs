@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('includes/head') %>
+    <h1>Articles</h1>
+    <section>
+      <% if(product) { %>
+        <article>
+          <div>
+            <img src="img/<%= product.importUri %>"alt="img">
+          </div>
+          <h3><%= product.title %></h3>
+          <h4><%= product.price %></h4>
+          <a href="/shop/buy/<%= product.id %>">Acheter</a>
+          <a href="/delete/<%= product.id %>">Supprimer</a>
+        </article>
+        <% } %>
+    </section>
+  </body>
+</html>
